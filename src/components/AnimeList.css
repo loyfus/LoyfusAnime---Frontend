@@ -1,0 +1,140 @@
+body {
+    background-color: #0A131E;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .toast{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title-h1 {
+    text-align: center;
+  }
+  
+  .anime-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .anime-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    width: 250px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .anime-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .anime-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .anime-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    margin: 0;
+    text-decoration: none;
+  }
+
+  .load-more-btn {
+    display: inline-block;
+    background-color: #3498db; /* Azul React */
+    color: #0A131E; /* Contraste com fundo */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto;
+    display: block; /* Centraliza o botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .load-more-btn:hover {
+    background-color: #0A131E; /* Cor de fundo */
+    color: #3498db; /* Azul React */
+    transform: translateY(-5px); /* Efeito ao passar o mouse */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .load-more-btn:active {
+    transform: translateY(0); /* Remove o efeito ao clicar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .anime-list {
+      gap: 15px;
+    }
+  
+    .anime-card {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .anime-list {
+      gap: 10px;
+    }
+  
+    .anime-card {
+      width: 150px;
+    }
+  }
+  
+/* Centraliza o conteúdo na tela */
+.loading-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .spinner {
+    border: 4px solid #f3f3f3; 
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

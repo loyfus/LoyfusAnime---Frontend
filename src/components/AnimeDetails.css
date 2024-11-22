@@ -1,0 +1,129 @@
+.anime-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  flex-direction: column;
+  min-height: 100vh; 
+  background: #0A131E;
+  padding: 20px;
+  overflow-y: auto; 
+  box-sizing: border-box;
+}
+
+.anime-details-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px auto;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.anime-details-card img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  justify-self: center;
+}
+
+.anime-details-title {
+  font-size: 2.5em;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #fff;
+  grid-column: span 2;
+  text-align: center;
+}
+
+.anime-details-description {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+  text-align: justify;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; 
+  -webkit-box-orient: vertical;
+  max-height: 400px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.anime-details-description.show-more {
+  max-height: none; 
+  -webkit-line-clamp: none;
+  overflow: visible; 
+}
+
+.show-more-button {
+  font-size: 1.1em;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.show-more-button:hover {
+  background-color: #203E70;
+}
+
+.show-more-button:focus {
+  outline: none;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button .arrow {
+  margin-right: 10px;
+}
+
+.back-button:hover {
+  color: #203E70;
+  background-color: #fff;
+  transform: scale(1.05); 
+}
+
+.back-button:active {
+  transform: scale(0.98); 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .anime-details-description {
+    -webkit-line-clamp: 3; 
+  }
+}
+
+@media (max-width: 480px) {
+  .anime-details-description {
+    -webkit-line-clamp: 2; 
+  }
+}

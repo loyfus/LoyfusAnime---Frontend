@@ -1,0 +1,29 @@
+.streaming-button {
+  display: flex;
+  align-items: center; /* Já está aqui, mas vamos reforçar */
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.streaming-button:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.streaming-button .streaming-icon {
+  width: 24px !important;
+  height: 24px !important;
+  margin-right: 8px;
+  margin-bottom: 0;
+  align-items: top;
+}
